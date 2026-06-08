@@ -1,5 +1,7 @@
 # Paper Reader Workflow
 
+[中文文档](README_CN.md)
+
 AI-assisted deep reading and knowledge management framework for electrocatalysis and computational electrochemistry research papers.
 
 Built on top of AI coding assistants (Claude Code / Codex), this framework provides structured workflows for:
