@@ -27,9 +27,24 @@ The AI reads `CONFIGURE.md`, finds all domain-specific markers (`<!-- DOMAIN:XXX
 
 See `CONFIGURE.md` for the full list of markers and replacement rules.
 
-## Installation
+## Setup
 
-### Option A: Claude Code (Recommended for full feature support)
+### 1. Download this project
+
+**Clone with Git (recommended):**
+
+```bash
+git clone https://github.com/feihanyu953-web/paper-reader-workflow.git
+cd paper-reader-workflow
+```
+
+**Or download as ZIP:**
+
+Click the green `<> Code` button on the [GitHub repo](https://github.com/feihanyu953-web/paper-reader-workflow) → Download ZIP → extract to your workspace.
+
+### 2. Install an AI assistant
+
+#### Claude Code (Recommended — full feature support)
 
 Claude Code is Anthropic's official CLI and IDE extension. It natively supports `CLAUDE.md` project instructions, hooks, agents, and skills — giving you the complete audit gate system and all 22 workflow skills.
 
@@ -57,7 +72,7 @@ Install the [Claude Code plugin](https://plugins.jetbrains.com/plugin/26538-clau
 
 > Claude Code requires an [Anthropic API key](https://console.anthropic.com/) or a Claude subscription.
 
-### Option B: Codex (Alternative)
+#### Codex (Alternative)
 
 Codex by OpenAI is an alternative AI coding assistant. It reads `AGENTS.md` as project instructions, providing native PDF vision support ideal for paper reading.
 
@@ -73,11 +88,11 @@ codex
 
 > **Note:** Codex supports the core workflows (reading, batch ingestion, KB management) but does not have the hook system for automated audit gates. Use manual review via `kb/REVIEWER.md` in Codex. See `SETUP.md`.
 
-### Option C: Other AI coding assistants
+#### Other AI coding assistants
 
 Any assistant that reads `CLAUDE.md` / `AGENTS.md` as project-level instructions will work. The core framework (routing rules, KB schema, review protocols) is pure Markdown and platform-agnostic.
 
-### Additional tools
+### 3. Additional tools
 
 | Tool | Required? | Install |
 |---|---|---|
@@ -87,12 +102,7 @@ Any assistant that reads `CLAUDE.md` / `AGENTS.md` as project-level instructions
 
 ## Quick start
 
-```bash
-git clone https://github.com/YOUR_USERNAME/paper-reader-workflow.git
-cd paper-reader-workflow
-```
-
-Then open this directory with Claude Code or Codex. The AI will automatically read `CLAUDE.md` and understand the workflows.
+Open this directory with Claude Code or Codex. The AI will automatically read `CLAUDE.md` and understand the workflows.
 
 ### First use
 

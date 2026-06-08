@@ -25,9 +25,24 @@ AI 自动读取 `CONFIGURE.md`，找到所有领域标记（`<!-- DOMAIN:XXX -->
 
 详见 `CONFIGURE.md`。
 
-## 安装
+## 配置环境
 
-### 方案 A：Claude Code（推荐，完整功能支持）
+### 1. 下载本项目
+
+**Git 克隆（推荐）：**
+
+```bash
+git clone https://github.com/feihanyu953-web/paper-reader-workflow.git
+cd paper-reader-workflow
+```
+
+**或下载 ZIP：**
+
+在 [GitHub 仓库页面](https://github.com/feihanyu953-web/paper-reader-workflow) 点击绿色 `<> Code` 按钮 → Download ZIP → 解压到工作目录。
+
+### 2. 安装 AI 助手
+
+#### Claude Code（推荐，完整功能支持）
 
 Claude Code 是 Anthropic 官方 CLI 和 IDE 扩展，原生支持 `CLAUDE.md` 项目指令、hooks、agents 和 skills，可获得完整审计门禁系统和全部 22 个工作流技能。
 
@@ -55,7 +70,7 @@ claude
 
 > Claude Code 需要 [Anthropic API Key](https://console.anthropic.com/) 或 Claude 订阅。
 
-### 方案 B：Codex（备选）
+#### Codex（备选）
 
 Codex 是 OpenAI 出品的 AI 编码助手，读取 `AGENTS.md` 作为项目指令，原生 PDF 视觉识别对论文阅读非常友好。
 
@@ -71,11 +86,11 @@ codex
 
 > **注意：** Codex 支持核心工作流（精读、批量入库、KB 管理），但没有 hook 系统，审计门禁需手动执行，详见 `SETUP.md`。
 
-### 方案 C：其他 AI 编码助手
+#### 其他 AI 编码助手
 
 任何能读取 `CLAUDE.md` / `AGENTS.md` 作为项目指令的助手均可使用。核心框架（路由规则、KB schema、审查协议）为纯 Markdown，平台无关。
 
-### 其他工具
+### 3. 其他工具
 
 | 工具 | 是否必需 | 安装方式 |
 |---|---|---|
@@ -85,12 +100,7 @@ codex
 
 ## 快速开始
 
-```bash
-git clone https://github.com/feihanyu953-web/paper-reader-workflow.git
-cd paper-reader-workflow
-```
-
-然后用 Claude Code 或 Codex 打开此目录。AI 会自动读取 `CLAUDE.md` 并理解所有工作流。
+用 Claude Code 或 Codex 打开此目录。AI 会自动读取 `CLAUDE.md` 并理解所有工作流。
 
 ### 首次使用
 
