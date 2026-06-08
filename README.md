@@ -13,9 +13,19 @@ Built on top of AI coding assistants (Claude Code / Codex), this framework provi
 - **Audit gates**: Automated quality control with cryptographic tree-hash receipts and independent reviewer checks
 - **Paper fetching**: Multi-source academic search tool (Google Scholar, Web of Science, Scopus, CNKI)
 
-## Who this is for
+## Research-domain agnostic
 
-Graduate students and postdocs in electrocatalysis, C-N coupling, electrooxidation, interfacial water, DFT, and MLFF+MD. The framework assumes domain knowledge and focuses on systematic reading quality.
+The framework ships with **electrocatalysis as a built-in example**, but works for **any research field** — lithium batteries, photocatalysis, organic synthesis, biomedicine, materials science, etc.
+
+**One command to configure:** Open this repo with Claude Code or Codex and say:
+
+> "I work on lithium-ion batteries and solid-state electrolytes."
+
+The AI reads `CONFIGURE.md`, finds all domain-specific markers (`<!-- DOMAIN:XXX -->`), and replaces example terms with your field's terminology — sub-domains, performance metrics, characterization techniques, deep-dive modules, and reference data.
+
+**Zero manual edits. 3 seconds. Done.**
+
+See `CONFIGURE.md` for the full list of markers and replacement rules.
 
 ## Prerequisites
 
@@ -38,9 +48,9 @@ Then open this directory with Claude Code or Codex. The AI will automatically re
 2. **Ingest to KB**: After reading, say "入库这篇论文" (ingest this paper to KB)
 3. **Export notes**: Say "导出笔记" (export notes) to generate a Markdown + PDF
 
-### Customize your research domain
+### One-command domain setup
 
-Edit `CLAUDE.md` line 5 to match your research area. The routing rules, KB schema, and review protocols are research-domain-agnostic.
+No manual editing. Say "I work on XXX direction" and the AI auto-configures routing examples, sub-domain modules, and reference data for your field. See `CONFIGURE.md` for details.
 
 ## Combined use with computer-kb-workflow
 

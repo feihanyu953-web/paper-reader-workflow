@@ -75,6 +75,9 @@ Remove-Item "kb/.audit/force_external_approval"
 
 ## 路由规则
 
+<!-- DOMAIN:ROUTE_EXAMPLES_START -->
+> 以下示例关键词为电催化方向。AI 首次配置时会替换为你的领域术语（参见 `CONFIGURE.md`）。
+
 | 用户问题涉及 | 路由至 |
 |---|---|
 | 催化剂合成、前驱体、热解温度、水热、沉积、掺杂、载体、酸洗、负载量 | `synthesis.md` |
@@ -85,16 +88,18 @@ Remove-Item "kb/.audit/force_external_approval"
 | 已读论文索引、分类框架、种子论文、关键数字速查 | `literature.md` |
 | 追问与讨论、概念理解、判断推理 | `qa.md` |
 | 多个模块同时涉及 | 按需读取全部相关模块，整合回答 |
-
+<!-- DOMAIN:ROUTE_EXAMPLES_END -->
 ## 通用参考骨架
 
-`reference/` 目录预置领域公认参考数据（标准 Raman 峰位、XPS 结合能等），每条标注出处。文献值与参考值冲突时并列呈现，不掩盖。
+<!-- DOMAIN:REFERENCE_DATA -->
+`reference/` 目录预置领域公认参考数据（以下为电催化示例），每条标注出处。文献值与参考值冲突时并列呈现，不掩盖。首次配置时可替换为你的领域标准谱图。
 
 | 文件 | 内容 |
 |---|---|
 | `reference/common_raman.md` | 电催化常见 Raman 峰位归属 |
 | `reference/common_ir.md` | 电催化常见红外特征峰 |
 | `reference/common_xps.md` | 常见元素 XPS 结合能参考 |
+<!-- /DOMAIN -->
 
 ## 数据格式约定
 
