@@ -1,0 +1,21 @@
+# Obsidian workspace state
+.obsidian/
+
+# Temporary pdftotext outputs
+tmp/
+temp_*.txt
+
+# Obsidian canvas temp files
+*.canvas
+*.base
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Node
+node_modules/
+
+# OS
+.DS_Store
+Thumbs.db
