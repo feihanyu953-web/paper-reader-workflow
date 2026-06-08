@@ -27,11 +27,63 @@ The AI reads `CONFIGURE.md`, finds all domain-specific markers (`<!-- DOMAIN:XXX
 
 See `CONFIGURE.md` for the full list of markers and replacement rules.
 
-## Prerequisites
+## Installation
 
-- [Claude Code](https://claude.ai/code) or [Codex](https://codex.ai) (or any AI coding assistant that reads `CLAUDE.md` / `AGENTS.md` as project instructions)
-- Windows (native), macOS/Linux (requires PowerShell Core for audit gate scripts)
-- `pdftotext` (for batch text extraction; optional if your AI has native PDF support)
+### Option A: Claude Code (Recommended for full feature support)
+
+Claude Code is Anthropic's official CLI and IDE extension. It natively supports `CLAUDE.md` project instructions, hooks, agents, and skills — giving you the complete audit gate system and all 22 workflow skills.
+
+**VS Code / Cursor / Windsurf:**
+
+1. Install the [Claude Code extension](https://marketplace.visualstudio.com/items?itemName=anthropic.claude-code) from the VS Code marketplace
+2. Open Command Palette (`Ctrl+Shift+P`) → `Claude Code: Open Claude Code`
+
+**Terminal (CLI):**
+
+```bash
+# npm (requires Node.js ≥ 18)
+npm install -g @anthropic-ai/claude-code
+
+# or via winget (Windows)
+winget install Anthropic.ClaudeCode
+
+# then run
+claude
+```
+
+**JetBrains (IntelliJ / PyCharm / WebStorm):**
+
+Install the [Claude Code plugin](https://plugins.jetbrains.com/plugin/26538-claude-code) from the JetBrains marketplace.
+
+> Claude Code requires an [Anthropic API key](https://console.anthropic.com/) or a Claude subscription.
+
+### Option B: Codex (Alternative)
+
+Codex by OpenAI is an alternative AI coding assistant. It reads `AGENTS.md` as project instructions, providing native PDF vision support ideal for paper reading.
+
+**Installation:**
+
+```bash
+# npm (requires Node.js ≥ 18)
+npm install -g @openai/codex
+
+# then run
+codex
+```
+
+> **Note:** Codex supports the core workflows (reading, batch ingestion, KB management) but does not have the hook system for automated audit gates. Use manual review via `kb/REVIEWER.md` in Codex. See `SETUP.md`.
+
+### Option C: Other AI coding assistants
+
+Any assistant that reads `CLAUDE.md` / `AGENTS.md` as project-level instructions will work. The core framework (routing rules, KB schema, review protocols) is pure Markdown and platform-agnostic.
+
+### Additional tools
+
+| Tool | Required? | Install |
+|---|---|---|
+| Git | Required | `winget install Git.Git` or [git-scm.com](https://git-scm.com) |
+| `pdftotext` | Optional | `winget install poppler` or `sudo apt install poppler-utils` |
+| PowerShell Core | macOS/Linux only | `brew install powershell` or `sudo apt install powershell` |
 
 ## Quick start
 
