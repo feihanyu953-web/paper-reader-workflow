@@ -58,7 +58,7 @@
 
 优先级 B - pdftotext 直接提取
   工具路径：先解析当前路径；下列仅为本机示例，不是固定要求。
-  示例：C:\Users\16778\AppData\Local\Microsoft\WinGet\Packages\oschwartz10612.Poppler_Microsoft.Winget.Source_8wekyb3d8bbwe\poppler-25.07.0\Library\bin\pdftotext.exe
+  示例：C:\Users\<username>\AppData\Local\Microsoft\WinGet\Packages\...\poppler-XX.XX.X\Library\bin\pdftotext.exe
   命令示例：pdftotext -layout "path\to\paper.pdf" -
   适用：证据定位、批量检索、表格/全文片段比对、审计复核。
 
@@ -76,7 +76,7 @@
 已知环境注意事项：
 
 - 某些 Claude Code / deepseek 路径下，PDF `Read` 依赖渲染图像后再由模型视觉识别，可能返回 `[Unsupported Image]` 或 `[Unsupported Document]`；此时必须转向文本管道。
-- Python 路径需先解析当前路径；`E:\Users\16778\anaconda3\python.exe` 仅为本机示例，不一定在默认 PATH。
+- Python 路径需先解析当前路径（如 `E:\Users\<username>\anaconda3\python.exe`）；不一定在默认 PATH。
 - Poppler 和 Tesseract 不一定在默认 PATH；必要时先解析当前路径，再使用完整路径调用。
 - SI 页面与补充表格不可默认忽略。若结论依赖 SI，必须标注 SI Fig./Table/Section。
 
